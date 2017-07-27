@@ -1,0 +1,14 @@
+<!--PROGRESS & COMPLETE LISTS -->
+	<div id="tasks">
+	<h4>IN PROGRESS</h4>
+			<ul ng-repeat="x in todos">
+				<li ng-show="x.status == 'in-progress' && x.name == activeNew">{{x.description}}<button id="editBtn" class= "btn btn-sm btn-success" ng-click="editFunc(x._id)">Edit</button><button id="deleteBtn" class= "btn btn-sm btn-danger" ng-click="deleteFunc(x._id)">Delete</button></li>
+			</ul>
+
+	<h4>COMPLETE</h4>
+	<ul ng-repeat="x in todos">
+			<li ng-show="x.status == 'Complete' && x.name == activeNew ">{{x.description}}<button id="editBtn" class= "btn btn-sm btn-success" ng-click="editFunc(x._id)">Edit</button><button id="deleteBtn" class= "btn btn-sm btn-danger" ng-click="deleteFunc(x._id)">Delete</button></li>
+		</ul>
+	</div>
+<!-- END LISTS -->
+
